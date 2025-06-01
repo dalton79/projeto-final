@@ -5,7 +5,7 @@
 import axios from "axios";
 
 // URL base da API
-const API_URL = "http://localhost:5000/api/registro-acoes";
+const API_URL = "https://sistema-consultoria.onrender.com/api/registro-acoes";
 
 // Objeto que vai conter as funções do serviço de registro de ações
 const servicoRegistroAcoes = {

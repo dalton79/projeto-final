@@ -5,7 +5,8 @@
 import axios from "axios";
 
 // URL base da API
-const API_URL = "http://localhost:5000/api/dashboard-incorporadora";
+const API_URL =
+  "https://sistema-consultoria.onrender.com/api/dashboard-incorporadora";
 
 // Objeto que vai conter as funções do serviço de dashboard da incorporadora
 const servicoDashboardIncorporadora = {

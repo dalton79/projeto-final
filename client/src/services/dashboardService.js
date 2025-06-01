@@ -1,12 +1,10 @@
-// Arquivo: client/src/services/dashboardService.js
 // Este arquivo contém funções para comunicação com a API de dashboards
-// Implementa os serviços para UC-007 e UC-013: Dashboards da Consultoria e da Incorporadora
 
 // Importando axios para fazer requisições HTTP
 import axios from "axios";
 
 // URL base da API
-const API_URL = "http://localhost:5000/api/dashboard";
+const API_URL = "https://sistema-consultoria.onrender.com/api/dashboard";
 
 // Objeto que vai conter as funções do serviço de dashboard
 const servicoDashboard = {

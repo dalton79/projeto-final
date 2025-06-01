@@ -4,7 +4,7 @@
 import axios from "axios";
 
 // URL base da API
-const API_URL = "http://localhost:5000/api/corretores";
+const API_URL = "https://sistema-consultoria.onrender.com/api/corretores";
 
 // Objeto que vai conter as funções do serviço de corretores
 const servicoCorretores = {
