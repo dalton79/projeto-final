@@ -19,7 +19,8 @@ const corretorRoutes = require("./routes/corretorRoutes");
 const registroAcaoRoutes = require("./routes/registroAcaoRoutes");
 const historicoAcaoRoutes = require("./routes/historicoAcaoRoutes");
 const dashboardRoutes = require("./routes/dashboardRoutes");
-const dashboardIncorporadoraRoutes = require("./routes/dashboardIncorporadoraRoutes"); // Nova importação
+const dashboardIncorporadoraRoutes = require("./routes/dashboardIncorporadoraRoutes");
+const initDbRoutes = require("./routes/initDbRoutes");
 
 // Criando a aplicação Express
 const app = express();
@@ -40,6 +41,7 @@ app.use("/api/registro-acoes", registroAcaoRoutes);
 app.use("/api/historico-acoes", historicoAcaoRoutes);
 app.use("/api/dashboard", dashboardRoutes);
 app.use("/api/dashboard-incorporadora", dashboardIncorporadoraRoutes); // Nova rota
+app.use("/api/init-db", initDbRoutes); // Nova rota para inicialização do banco
 
 // Rota de teste para verificar se o servidor está funcionando
 app.get("/", (req, res) => {
@@ -181,5 +183,10 @@ app.listen(PORT, () => {
   );
   console.log(
     "- GET /api/dashboard-incorporadora/filtros → Obter dados para os filtros do Dashboard da Incorporadora"
+  );
+
+  // Rota de inicialização do banco de dados
+  console.log(
+    "- GET /api/init-db/init-db       → Inicializar o banco de dados"
   );
 });
