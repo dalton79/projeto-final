@@ -93,7 +93,6 @@ function PaginaIncorporadoras() {
 
   // Função para entrar no modo de edição
   const editarIncorporadora = () => {
-    // Fazemos uma cópia profunda do objeto para evitar referências compartilhadas
     const incorporadoraCopia = JSON.parse(
       JSON.stringify(incorporadoraSelecionada)
     );
@@ -487,13 +486,14 @@ function PaginaIncorporadoras() {
         <h3>Editar Incorporadora</h3>
         <div className="botoesAcao">
           <button
-            type="submit"
-            form="formIncorporadora"
+            type="button" // Mudei para type="button" para evitar submit automático
+            onClick={manipularEnvioFormulario}
             className="botaoSalvar"
           >
             Salvar
           </button>
           <button
+            type="button"
             className="botaoCancelar"
             onClick={() => setModo("visualizar")}
           >
@@ -503,7 +503,8 @@ function PaginaIncorporadoras() {
       </div>
 
       <div className="corpoFormulario">
-        <form id="formIncorporadora" onSubmit={manipularEnvioFormulario}>
+        <form id="formIncorporadora">
+          {/* Removi o onSubmit daqui */}
           <div className="campoFormulario">
             <label htmlFor="razao_social">Razão Social:</label>
             <input
@@ -517,6 +518,7 @@ function PaginaIncorporadoras() {
             />
           </div>
 
+          {/* ... outros campos permanecem iguais ... */}
           <div className="campoFormulario">
             <label htmlFor="cnpj">CNPJ:</label>
             <input
