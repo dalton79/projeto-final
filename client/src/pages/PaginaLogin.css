@@ -1,0 +1,183 @@
+/* 
+ * Estilos para a página de login do sistema
+ */
+
+/* Estilos gerais da página */
+.paginaLogin {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: #f5f5f5; /* Fundo cinza claro */
+  font-family: Arial, sans-serif;
+  padding: 20px;
+}
+
+/* Container principal do formulário */
+.containerLogin {
+  width: 100%;
+  max-width: 400px;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  padding: 30px;
+  margin-bottom: 20px;
+}
+
+/* Área do cabeçalho com logo e título */
+.cabecalhoLogin {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+/* Estilo do logo */
+.logoLogin {
+  width: 120px; /* Aumentado de 80px para 120px */
+  height: auto;
+  margin-bottom: 15px;
+}
+
+/* Título principal */
+.tituloLogin {
+  color: #2c5cbb; /* Azul do logo */
+  font-size: 24px;
+  margin: 0 0 5px 0;
+}
+
+/* Subtítulo */
+.subtituloLogin {
+  color: #666666; /* Cinza médio */
+  font-size: 14px;
+  margin: 0;
+}
+
+/* Estilo do formulário */
+.formularioLogin {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Cada campo do formulário */
+.campoFormulario {
+  margin-bottom: 20px;
+}
+
+/* Rótulos dos campos */
+.rotuloInput {
+  display: block;
+  margin-bottom: 5px;
+  color: #333333; /* Cinza escuro */
+  font-weight: bold;
+  font-size: 14px;
+}
+
+/* Campos de entrada de texto */
+.entradaTexto {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #dddddd; /* Cinza claro */
+  border-radius: 4px;
+  font-size: 16px;
+  box-sizing: border-box; /* Garante que o padding não aumenta a largura */
+}
+
+.entradaTexto:focus {
+  border-color: #2c5cbb; /* Azul do logo */
+  outline: none;
+  box-shadow: 0 0 0 2px rgba(44, 92, 187, 0.2); /* Sombra azul suave */
+}
+
+/* Mensagem de erro */
+.mensagemErro {
+  background-color: #ffebee; /* Vermelho bem claro */
+  color: #d32f2f; /* Vermelho escuro */
+  padding: 10px;
+  border-radius: 4px;
+  margin-bottom: 20px;
+  font-size: 14px;
+}
+
+/* Botão de login */
+.botaoLogin {
+  background-color: #2c5cbb; /* Azul do logo */
+  color: white;
+  border: none;
+  border-radius: 4px;
+  padding: 12px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.botaoLogin:hover {
+  background-color: #224a9e; /* Azul um pouco mais escuro */
+}
+
+.botaoLogin:disabled {
+  background-color: #a0a0a0; /* Cinza */
+  cursor: not-allowed;
+}
+
+/* Link de esqueci minha senha */
+.botaoLinkSenha {
+  background: none;
+  border: none;
+  color: #2c5cbb;
+  font-size: 14px;
+  cursor: pointer;
+  padding: 0;
+  text-decoration: none;
+  font-family: inherit;
+}
+
+.botaoLinkSenha:hover {
+  text-decoration: underline;
+}
+
+/* Box de usuários de teste */
+.boxUsuariosTeste {
+  margin-top: 30px;
+  background-color: #f8f9fa;
+  border-radius: 4px;
+  padding: 15px;
+  border: 1px solid #e9ecef;
+}
+
+.tituloUsuariosTeste {
+  font-size: 16px;
+  margin-top: 0;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.listaUsuariosTeste {
+  font-size: 14px;
+}
+
+.itemUsuarioTeste {
+  margin-bottom: 8px;
+}
+
+.botaoPreencherUsuario {
+  background-color: transparent;
+  border: none;
+  color: #2c5cbb;
+  cursor: pointer;
+  font-size: 14px;
+  margin-left: 5px;
+  text-decoration: underline;
+}
+
+.botaoPreencherUsuario:hover {
+  color: #224a9e;
+}
+
+/* Rodapé da página */
+.rodapePagina {
+  color: #666666;
+  font-size: 14px;
+  margin-top: 20px;
+  text-align: center;
+}

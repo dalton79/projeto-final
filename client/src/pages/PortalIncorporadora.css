@@ -1,0 +1,179 @@
+/* 
+ * Estilos para o Portal da Incorporadora
+ */
+
+/* Estilos gerais do portal */
+.portalIncorporadora {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  font-family: Arial, sans-serif;
+}
+
+/* Estilos do cabeçalho */
+.cabecalhoPortal {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #ffffff;
+  padding: 10px 20px;
+  border-bottom: 1px solid #e0e0e0;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+/* Área do logo */
+.areaLogo {
+  display: flex;
+  align-items: center;
+}
+
+.logoPortal {
+  width: 40px;
+  height: auto;
+  margin-right: 10px;
+}
+
+.nomeEmpresa {
+  font-size: 18px;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+}
+
+.textoBusinessConsulting {
+  color: #2c5cbb; /* Azul da consultoria */
+}
+
+.separadorNome {
+  margin: 0 8px;
+  color: #666;
+}
+
+.textoIncorporadora {
+  color: #2e7d32; /* Verde para incorporadora */
+}
+
+/* Menu de navegação */
+.menuNavegacao {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.listaMenu {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.itemMenu button,
+.itemMenuAtivo button {
+  background: none;
+  border: none;
+  padding: 10px 15px;
+  margin: 0 5px;
+  font-size: 14px;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: all 0.3s;
+}
+
+.itemMenu button {
+  color: #333;
+}
+
+.itemMenuAtivo button {
+  color: #2e7d32; /* Verde para incorporadora */
+  background-color: #e8f5e9; /* Verde claro */
+  font-weight: bold;
+}
+
+.itemMenu button:hover {
+  background-color: #f5f5f5;
+}
+
+/* Área do usuário */
+.areaUsuario {
+  display: flex;
+  align-items: center;
+}
+
+.nomeUsuario {
+  margin-right: 15px;
+  font-size: 14px;
+  color: #555;
+}
+
+.menuUsuario {
+  display: flex;
+}
+
+.botaoUsuario,
+.botaoSair {
+  background: none;
+  border: none;
+  padding: 8px 12px;
+  margin-left: 5px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 13px;
+  transition: all 0.3s;
+}
+
+.botaoUsuario {
+  color: #555;
+  background-color: #f5f5f5;
+}
+
+.botaoSair {
+  color: white;
+  background-color: #2e7d32; /* Verde para incorporadora */
+}
+
+.botaoUsuario:hover {
+  background-color: #e0e0e0;
+}
+
+.botaoSair:hover {
+  background-color: #1b5e20; /* Verde mais escuro */
+}
+
+/* Conteúdo principal */
+.conteudo {
+  flex: 1;
+  padding: 20px;
+  background-color: #f5f5f5;
+}
+
+.conteudoPrincipal {
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  padding: 20px;
+}
+
+/* Dashboard */
+.painelDashboard {
+  margin-top: 20px;
+}
+
+/* Rodapé */
+.rodapePortal {
+  padding: 15px;
+  background-color: #f8f9fa;
+  border-top: 1px solid #e0e0e0;
+  text-align: center;
+  color: #666;
+  font-size: 14px;
+}
+
+/* Estado de carregamento */
+.carregando {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  font-size: 18px;
+  color: #2e7d32; /* Verde para incorporadora */
+}

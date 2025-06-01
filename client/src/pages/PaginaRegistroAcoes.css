@@ -1,0 +1,336 @@
+/* 
+ * Estilos para a página de registro de ações
+ */
+
+/* Estilos gerais da página */
+.paginaRegistroAcoes {
+  width: 100%;
+  font-family: Arial, sans-serif;
+}
+
+/* Layout da página */
+.conteudoPagina {
+  display: flex;
+  gap: 20px;
+}
+
+/* Painel de filtros (lado esquerdo) */
+.painelFiltros {
+  width: 25%;
+  min-width: 250px;
+  background-color: #e8f5e9; /* Verde muito claro */
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.painelFiltros h3 {
+  color: #2e7d32; /* Verde da incorporadora */
+  margin-top: 0;
+  margin-bottom: 20px;
+  font-size: 18px;
+}
+
+/* Campos do formulário de filtro */
+.campoFormulario {
+  margin-bottom: 15px;
+}
+
+.campoFormulario label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+  font-size: 14px;
+  color: #333;
+}
+
+.entradaTexto {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 14px;
+  box-sizing: border-box;
+}
+
+.entradaTexto:focus {
+  border-color: #2e7d32; /* Verde da incorporadora */
+  outline: none;
+  box-shadow: 0 0 0 2px rgba(46, 125, 50, 0.2);
+}
+
+/* Texto de ajuda para os campos do formulário */
+.infoAjuda {
+  display: block;
+  font-size: 12px;
+  color: #666;
+  margin-top: 4px;
+  font-style: italic;
+}
+
+/* Estilo para textarea */
+textarea.entradaTexto {
+  resize: vertical;
+  min-height: 100px;
+}
+
+/* Botão de pesquisar */
+.botaoPesquisar {
+  width: 100%;
+  padding: 10px;
+  background-color: #2e7d32; /* Verde da incorporadora */
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+.botaoPesquisar:hover {
+  background-color: #1b5e20; /* Verde mais escuro */
+}
+
+/* Painel de resultados (lado direito) */
+.painelResultados,
+.painelDetalhes,
+.painelFormulario {
+  flex: 1;
+  background-color: white;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+/* Cabeçalho dos resultados */
+.cabecalhoResultados,
+.cabecalhoDetalhes,
+.cabecalhoFormulario {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.cabecalhoResultados h3,
+.cabecalhoDetalhes h3,
+.cabecalhoFormulario h3 {
+  color: #2e7d32; /* Verde da incorporadora */
+  margin: 0;
+  font-size: 18px;
+}
+
+/* Botão para cadastrar novo registro */
+.botaoNovo {
+  background-color: #2e7d32; /* Verde */
+  color: white;
+  border: none;
+  border-radius: 4px;
+  padding: 8px 15px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.botaoNovo:hover {
+  background-color: #1b5e20; /* Verde mais escuro */
+}
+
+/* Tabela de resultados */
+.tabelaResultados {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.tabelaResultados th {
+  background-color: #e8f5e9; /* Verde muito claro */
+  color: #2e7d32; /* Verde da incorporadora */
+  text-align: left;
+  padding: 10px;
+  font-size: 14px;
+}
+
+.tabelaResultados td {
+  padding: 10px;
+  border-bottom: 1px solid #eee;
+  font-size: 14px;
+}
+
+.tabelaResultados tr:hover {
+  background-color: #f9f9f9;
+}
+
+/* Coluna de pontuação na tabela */
+.tabelaResultados td:nth-child(4) {
+  font-weight: bold;
+  color: #2e7d32; /* Verde da incorporadora */
+}
+
+/* Botões de ação na tabela */
+.botaoAcao {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+/* Mensagens de estado */
+.carregando,
+.semResultados {
+  padding: 20px;
+  text-align: center;
+  color: #666;
+}
+
+/* Mensagens de sucesso/erro */
+.mensagem {
+  padding: 12px 20px;
+  margin-bottom: 20px;
+  border-radius: 4px;
+  font-size: 14px;
+}
+
+.mensagem.sucesso {
+  background-color: #e8f5e9; /* Verde claro */
+  color: #2e7d32; /* Verde */
+  border: 1px solid #c8e6c9;
+}
+
+.mensagem.erro {
+  background-color: #ffebee; /* Vermelho claro */
+  color: #c62828; /* Vermelho */
+  border: 1px solid #ffcdd2;
+}
+
+/* Detalhes do registro */
+.detalhesRegistro {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.grupoDetalhes {
+  display: flex;
+  gap: 20px;
+}
+
+.detalhe {
+  flex: 1;
+}
+
+.rotuloDetalhe {
+  font-weight: bold;
+  color: #666;
+  margin-right: 5px;
+}
+
+.valorDetalhe {
+  color: #333;
+}
+
+/* Valores especiais nos detalhes */
+.valorDetalhe.pontuacao {
+  font-weight: bold;
+  color: #2e7d32; /* Verde da incorporadora */
+}
+
+.valorDetalhe.vgv {
+  font-weight: bold;
+  color: #1976d2; /* Azul */
+}
+
+/* Botões de ação nos detalhes */
+.botoesAcao {
+  display: flex;
+  gap: 10px;
+}
+
+.botaoEditar,
+.botaoSalvar {
+  background-color: #2196f3; /* Azul */
+  color: white;
+  border: none;
+  border-radius: 4px;
+  padding: 8px 15px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.botaoEditar:hover,
+.botaoSalvar:hover {
+  background-color: #1976d2; /* Azul mais escuro */
+}
+
+.botaoExcluir {
+  background-color: #f44336; /* Vermelho */
+  color: white;
+  border: none;
+  border-radius: 4px;
+  padding: 8px 15px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.botaoExcluir:hover {
+  background-color: #d32f2f; /* Vermelho mais escuro */
+}
+
+.botaoVoltar,
+.botaoCancelar {
+  background-color: #9e9e9e; /* Cinza */
+  color: white;
+  border: none;
+  border-radius: 4px;
+  padding: 8px 15px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.botaoVoltar:hover,
+.botaoCancelar:hover {
+  background-color: #757575; /* Cinza mais escuro */
+}
+
+/* Formulário de edição/novo */
+.corpoFormulario {
+  padding: 10px 0;
+}
+
+/* Grupo de campos lado a lado */
+.grupoFormulario {
+  display: flex;
+  gap: 15px;
+}
+
+.grupoFormulario .campoFormulario {
+  flex: 1;
+}
+
+/* Estilo para o campo de anotações */
+.campoFormulario textarea {
+  width: 100%;
+  min-height: 80px;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .conteudoPagina {
+    flex-direction: column;
+  }
+
+  .painelFiltros {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+
+  .tabelaResultados {
+    display: block;
+    overflow-x: auto;
+  }
+
+  .grupoFormulario {
+    flex-direction: column;
+    gap: 0;
+  }
+}
