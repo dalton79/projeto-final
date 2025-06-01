@@ -1,4 +1,3 @@
-
 -- Este script cria todas as tabelas necessárias para o sistema de mensuração
 -- da relação entre incorporadoras e imobiliárias.
 
@@ -82,16 +81,13 @@ CREATE TABLE imobiliarias (
 
 -- =========================================================================
 -- TABELA: corretores
--- Armazena os corretores das imobiliárias
+-- Armazena os corretores 
 -- =========================================================================
 CREATE TABLE corretores (
     id SERIAL PRIMARY KEY,                         -- Identificador único (autoincremento)
     nome VARCHAR(255) NOT NULL,                    -- Nome do corretor
     sobrenome VARCHAR(255) NOT NULL,               -- Sobrenome do corretor
-    criado_em TIMESTAMP DEFAULT CURRENT_TIMESTAMP, -- Data de criação do registro
-    
-    -- Referência à tabela imobiliárias
-    FOREIGN KEY (imobiliaria_id) REFERENCES imobiliarias(id) ON DELETE CASCADE
+    criado_em TIMESTAMP DEFAULT CURRENT_TIMESTAMP  -- Data de criação do registro
 );
 
 -- =========================================================================
@@ -160,8 +156,8 @@ INSERT INTO imobiliarias (nome, cidade, uf)
 VALUES ('Imobiliária Sucesso', 'Porto Alegre', 'RS');
 
 -- Inserindo um corretor para teste
-INSERT INTO corretores (imobiliaria_id, nome, sobrenome) 
-VALUES (1, 'Maria', 'Santos');
+INSERT INTO corretores (nome, sobrenome) 
+VALUES ('Maria', 'Santos');
 
 -- Inserindo ações para teste
 INSERT INTO acoes (nome, pontuacao) VALUES ('Visita com cliente', 10);
