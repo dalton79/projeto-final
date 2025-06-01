@@ -117,6 +117,8 @@ function PaginaUsuarios() {
 
   // Função para entrar no modo de edição
   const editarUsuario = () => {
+    const usuarioCopia = JSON.parse(JSON.stringify(usuarioSelecionado));
+    setUsuarioSelecionado(usuarioCopia);
     setModo("editar");
   };
 
@@ -479,10 +481,15 @@ function PaginaUsuarios() {
       <div className="cabecalhoFormulario">
         <h3>Editar Usuário</h3>
         <div className="botoesAcao">
-          <button type="submit" form="formUsuario" className="botaoSalvar">
+          <button
+            type="button"
+            onClick={manipularEnvioFormulario}
+            className="botaoSalvar"
+          >
             Salvar
           </button>
           <button
+            type="button"
             className="botaoCancelar"
             onClick={() => setModo("visualizar")}
           >
@@ -492,7 +499,7 @@ function PaginaUsuarios() {
       </div>
 
       <div className="corpoFormulario">
-        <form id="formUsuario" onSubmit={manipularEnvioFormulario}>
+        <form id="formUsuario">
           <div className="campoFormulario">
             <label htmlFor="nome">Nome:</label>
             <input
@@ -593,6 +600,7 @@ function PaginaUsuarios() {
     <div className="painelFormulario">
       <div className="cabecalhoFormulario">
         <h3>Novo Usuário</h3>
+
         <div className="botoesAcao">
           <button type="submit" form="formUsuario" className="botaoSalvar">
             Salvar
