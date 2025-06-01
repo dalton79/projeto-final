@@ -93,6 +93,11 @@ function PaginaIncorporadoras() {
 
   // Função para entrar no modo de edição
   const editarIncorporadora = () => {
+    // Fazemos uma cópia profunda do objeto para evitar referências compartilhadas
+    const incorporadoraCopia = JSON.parse(
+      JSON.stringify(incorporadoraSelecionada)
+    );
+    setIncorporadoraSelecionada(incorporadoraCopia);
     setModo("editar");
   };
 
