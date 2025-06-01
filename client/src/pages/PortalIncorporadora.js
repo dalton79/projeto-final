@@ -8,6 +8,7 @@ import PaginaImobiliarias from "./PaginaImobiliarias";
 import PaginaCorretores from "./PaginaCorretores";
 import PaginaRegistroAcoes from "./PaginaRegistroAcoes";
 import DashboardIncorporadora from "./DashboardIncorporadora";
+import servicoIncorporadoras from "../services/incorporadoraService";
 import "./PortalIncorporadora.css";
 
 // Componente placeholder para a página de Alterar Senha
@@ -53,11 +54,40 @@ function PortalIncorporadora() {
     // Se chegou aqui, o usuário tem permissão. Armazena os dados do usuário no estado
     setUsuario(usuarioLogado);
 
+    // Se o usuário tem um ID de incorporadora, busca os detalhes da incorporadora
     if (usuarioLogado.incorporadora_id) {
+      // Atualiza o ID da incorporadora no estado
       setIncorporadora((prev) => ({
         ...prev,
         id: usuarioLogado.incorporadora_id,
       }));
+
+      // Busca os detalhes da incorporadora pelo ID
+      const buscarDetalhesIncorporadora = async () => {
+        try {
+          const resultado =
+            await servicoIncorporadoras.buscarIncorporadoraPorId(
+              usuarioLogado.incorporadora_id
+            );
+
+          if (resultado.sucesso) {
+            setIncorporadora({
+              id: resultado.dados.id,
+              nome:
+                resultado.dados.nome_exibicao || resultado.dados.razao_social,
+            });
+          } else {
+            console.error(
+              "Erro ao buscar detalhes da incorporadora:",
+              resultado.mensagem
+            );
+          }
+        } catch (erro) {
+          console.error("Erro ao buscar detalhes da incorporadora:", erro);
+        }
+      };
+
+      buscarDetalhesIncorporadora();
     }
   }, [navegar]);
 
